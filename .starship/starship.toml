@@ -1,0 +1,24 @@
+add_newline = true
+format = "$all"
+
+[directory]
+style = "cyan"
+
+[package]
+disabled = true
+
+[aws]
+disabled = true
+style = "blue"
+
+[git_branch]
+symbol = "🌱 "
+style = "green"
+
+[git_status]
+style = "yellow"
+
+[nodejs]
+format = "via[$symbol($version )]($style)"
+symbol = "   "
+style = "red"
