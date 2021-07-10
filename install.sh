@@ -1,6 +1,6 @@
 #!/bin/zsh 
 
-DOT_FILES=(.zshrc .zsh)
+DOT_FILES=(.zshrc .zsh .starship)
 
 for file in ${DOT_FILES}
 do
