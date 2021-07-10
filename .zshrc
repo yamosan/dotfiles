@@ -1,5 +1,5 @@
 autoload -Uz colors && colors
-autoload -U zmv
+autoload -Uz zmv
 
 setopt auto_pushd # cd -[tab] で履歴
 stty stop undef # C-s での画面停止を無効
