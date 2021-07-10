@@ -1,3 +1,2 @@
-#! /usr/bin/zsh 
-ln -fs .zshrc ~/.zshrc
- 
+#!/bin/zsh 
+ln -fs $HOME/dotfiles/.zshrc $HOME/.zshrc
