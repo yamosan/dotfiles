@@ -5,7 +5,7 @@ setopt auto_pushd # cd -[tab] で履歴
 stty stop undef # C-s での画面停止を無効
 
 # zsh-completions
-fpath=(~/.zsh/completion/src $fpath)
+fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit
 
 # LS_COLORSを設定しておく
