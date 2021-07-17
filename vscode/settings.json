@@ -1,0 +1,90 @@
+{
+  "terminal.integrated.defaultProfile.osx": "zsh",
+
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "editor.highlightActiveIndentGuide": false,
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme",
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+
+  "git.autofetch": true,
+
+  "breadcrumbs.enabled": true,
+
+  "vscodeGoogleTranslate.preferredLanguage": "Japanese",
+
+  // extensions ---------------------------------------------------------------------
+  // "formattingToggle.affects": ["formatOnPaste", "formatOnSave", "formatOnType"],
+  "formattingToggle.affects": ["formatOnPaste", "formatOnSave"],
+
+  "cSpell.userWords": ["fuga", "hoge", "piyo", "signin", "signup"],
+
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.useLocalIp": true,
+
+  "bracket-pair-colorizer-2.colorMode": "Independent",
+  "bracket-pair-colorizer-2.colors": ["White", "Gold", "Orchid"],
+
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7ZXJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIkZGRkZGRlwiLFwiRkZGRjY2XCIsXCJGRjAwMDBcIixcIkZGOTk5OVwiLFwiMDAwMDAwXCIsXCIwMENDMDBcIixcIjY2NjZGRlwiXSxcImZvcm1hdFdpZHRoXCI6MjQwLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  // --------------------------------------------------------------------------------
+
+  // JavaScript, TypeScript ----------------------------------------------------------
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // Prettier and ESlint
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  // --------------------------------------------------------------------------------
+
+  // Python -------------------------------------------------------------------------
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+  "python.linting.enabled": true,
+  // 標準のpylintをオフにし、PEP8をオン
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+
+  // ファイル保存時にLint実行。
+  "python.linting.lintOnSave": true,
+
+  // black(formatter)
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "119"],
+  // blackとflake8の競合を解決
+  "python.linting.flake8Args": [
+    "--max-line-length",
+    "119",
+    "--ignore=E203, W503, W504"
+  ],
+
+  // autopep8(formatter)
+  // "python.linting.flake8Args": [
+  //   "--max-line-length=150",
+  //   "--max-complexity=20",
+  //   "--ignore=W293, W504", // +などのオペレータの後で改行するとWarningになるW504もオフ
+  // ],
+  // "python.formatting.provider": "autopep8",
+  // "python.formatting.autopep8Args": [
+  //   "--aggressive", "--aggressive", // aggressiveレベルを2にする。(積極的なフォーマッティング)
+  // ],
+
+  "python.languageServer": "Pylance"
+  // --------------------------------------------------------------------------------
+}
