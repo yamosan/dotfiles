@@ -1,0 +1,3 @@
+```shell
+$ sh install.sh
+```
