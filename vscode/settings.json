@@ -85,6 +85,9 @@
   //   "--aggressive", "--aggressive", // aggressiveレベルを2にする。(積極的なフォーマッティング)
   // ],
 
-  "python.languageServer": "Pylance"
+  "python.languageServer": "Pylance",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  }
   // --------------------------------------------------------------------------------
 }

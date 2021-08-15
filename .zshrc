@@ -59,6 +59,10 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # jenv
 if which jenv > /dev/null; then
   # JENV_ROOTがemptyの場合、'${HOME}/.jenv'がrootと設定される
@@ -70,11 +74,6 @@ fi
 export PIPENV_VENV_IN_PROJECT=true # プロジェクトディレクトリ配下に仮想環境を作成
 
 export PATH="/usr/local/sbin:$PATH"
-
-
-# set Python's default version to 3.X
-alias python='python3'
-alias pip='pip3'
 
 alias cdd='cd ~/Desktop'
 alias relogin='exec $SHELL -l'
