@@ -80,3 +80,4 @@ alias relogin='exec $SHELL -l'
 alias ls="ls -1G"
 alias ll="ls -lG"
 alias la="ls -laG"
+alias dc='docker-compose'
