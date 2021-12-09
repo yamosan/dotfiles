@@ -13,8 +13,9 @@
   "editor.formatOnType": true,
 
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.enablePreview": false,
+  // "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Cobalt Next",
 
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 3000,
@@ -49,12 +50,19 @@
   // Prettier and ESlint
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  // 1.63.0から可能 (参考: https://github.com/microsoft/vscode/issues/51935#issuecomment-981503076)
+  // "[javascript][javascriptreact][typescript][typescriptreact][html][css][scss][json][graphql]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+  // },
+
   // --------------------------------------------------------------------------------
 
   // Python -------------------------------------------------------------------------
   "[python]": {
     "editor.tabSize": 4,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": null // prettierの方を外したいが、↑の文法が可能になるまではこうしとく
   },
   "python.linting.enabled": true,
   // 標準のpylintをオフにし、PEP8をオン
@@ -74,6 +82,9 @@
     "--ignore=E203, W503, W504"
   ],
 
+  // mypyによる静的型付け
+  "python.linting.mypyEnabled": true,
+
   // autopep8(formatter)
   // "python.linting.flake8Args": [
   //   "--max-line-length=150",
@@ -88,6 +99,17 @@
   "python.languageServer": "Pylance",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "explorer.compactFolders": false,
+  "editor.bracketPairColorization.enabled": true,
+  "redhat.telemetry.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
   }
+
   // --------------------------------------------------------------------------------
 }
