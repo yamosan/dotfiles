@@ -49,35 +49,15 @@ bindkey '^r' peco-select-history
 export STARSHIP_CONFIG=~/.starship/starship.toml
 eval "$(starship init zsh)"
 
-
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-
-# pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-
-# jenv
-if which jenv > /dev/null; then
-  # JENV_ROOTがemptyの場合、'${HOME}/.jenv'がrootと設定される
-  export JENV_ROOT=/usr/local/var/jenv
-  eval "$(jenv init -)"
-fi
+# asdf
+. $HOME/.asdf/asdf.sh
 
 # pipenv
 export PIPENV_VENV_IN_PROJECT=true # プロジェクトディレクトリ配下に仮想環境を作成
-
-export PATH="/usr/local/sbin:$PATH"
 
 alias cdd='cd ~/Desktop'
 alias relogin='exec $SHELL -l'
 alias ls="ls -1G"
 alias ll="ls -lG"
 alias la="ls -laG"
-alias dc='docker-compose'
+alias dc='docker-compose'export LDFLAGS="-L/usr/local/opt/zlib/lib"
