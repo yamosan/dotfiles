@@ -45,7 +45,7 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 
-# starship 
+# starship
 export STARSHIP_CONFIG=~/.starship/starship.toml
 eval "$(starship init zsh)"
 
