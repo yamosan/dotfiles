@@ -36,7 +36,7 @@
 
   "vscodeGoogleTranslate.preferredLanguage": "Japanese",
 
-  // extensions ---------------------------------------------------------------------
+  // <<< extensions >>>
   // "formattingToggle.affects": ["formatOnPaste", "formatOnSave", "formatOnType"],
   "formattingToggle.affects": ["formatOnPaste", "formatOnSave"],
 
@@ -53,51 +53,63 @@
     "plaintext": false,
     "markdown": false
   },
-  // --------------------------------------------------------------------------------
 
-  // JavaScript, TypeScript ----------------------------------------------------------
+  "highlight.regexes": {
+    "(\/\/ <<<.*>>>\n)": {
+      "decorations": [
+        {
+          "backgroundColor": "#719FB0",
+          "overviewRulerColor": "#719FB0",
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        },
+      ]
+    },
+  },
+
+  // <<< JavaScript, TypeScript >>>
   "typescript.updateImportsOnFileMove.enabled": "never",
   "javascript.updateImportsOnFileMove.enabled": "always",
 
   // Prettier and ESlint
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   // 1.63.0から可能 (参考: https://github.com/microsoft/vscode/issues/51935#issuecomment-981503076)
-  // "[javascript][javascriptreact][typescript][typescriptreact][html][css][scss][json][graphql]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  //   "editor.codeActionsOnSave": ["source.fixAll.eslint"]
-  // },
+  "[javascript][javascriptreact][typescript][typescriptreact][html][css][scss][json][graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+  },
 
-  // --------------------------------------------------------------------------------
-
-  // Python -------------------------------------------------------------------------
+  // <<< Python >>>
   "[python]": {
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
-    "editor.defaultFormatter": null // prettierの方を外したいが、↑の文法が可能になるまではこうしとく
   },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+
+  // --- Linter and Formatter(Flake8, black, mypy) ---
   "python.linting.enabled": true,
-  // 標準のpylintをオフにし、PEP8をオン
+  "python.linting.lintOnSave": true,
+  "python.languageServer": "Pylance",
+  // # Flake8
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
-
-  // ファイル保存時にLint実行。
-  "python.linting.lintOnSave": true,
-
-  // black(formatter)
+  // # black
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length", "119"],
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "119"
+  ],
+  // # mypy
+  "python.linting.mypyEnabled": true,
+
   // blackとflake8の競合を解決
   "python.linting.flake8Args": [
     "--max-line-length",
     "119",
     "--ignore=E203, W503, W504"
   ],
-
-  // mypyによる静的型付け
-  "python.linting.mypyEnabled": true,
-
-  // autopep8(formatter)
+  // --- Linter and Formatter(autopep8) ---
   // "python.linting.flake8Args": [
   //   "--max-line-length=150",
   //   "--max-complexity=20",
@@ -107,10 +119,4 @@
   // "python.formatting.autopep8Args": [
   //   "--aggressive", "--aggressive", // aggressiveレベルを2にする。(積極的なフォーマッティング)
   // ],
-
-  "python.languageServer": "Pylance",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  }
-  // --------------------------------------------------------------------------------
 }
