@@ -55,7 +55,7 @@
   },
 
   "highlight.regexes": {
-    "(\/\/ <<<.*>>>\n)": {
+    "(\/\/.*<{3}.*>{3})": {
       "decorations": [
         {
           "backgroundColor": "#719FB0",
@@ -67,11 +67,11 @@
     },
   },
 
-  // <<< JavaScript, TypeScript >>>
-  "typescript.updateImportsOnFileMove.enabled": "never",
+  //  <<< JavaScript, TypeScript >>>
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
-  // Prettier and ESlint
+  //  --- Linter and Formatter(Prettier, ESlint) ---
   // 1.63.0から可能 (参考: https://github.com/microsoft/vscode/issues/51935#issuecomment-981503076)
   "[javascript][javascriptreact][typescript][typescriptreact][html][css][scss][json][graphql]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
