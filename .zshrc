@@ -55,9 +55,11 @@ eval "$(starship init zsh)"
 # pipenv
 export PIPENV_VENV_IN_PROJECT=true # プロジェクトディレクトリ配下に仮想環境を作成
 
+alias c='clear'
 alias cdd='cd ~/Desktop'
 alias relogin='exec $SHELL -l'
 alias ls="ls -1G"
 alias ll="ls -lG"
 alias la="ls -laG"
-alias dc='docker-compose'export LDFLAGS="-L/usr/local/opt/zlib/lib"
+alias dc='docker-compose'
+alias dcu='docker-compose up -d'
