@@ -5,7 +5,7 @@ VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
 
 ln -svf "$SCRIPT_DIR/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
 
-install extention
+# install extention
 cat extensions | while read line
 do
  code --install-extension $line
