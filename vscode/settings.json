@@ -62,9 +62,9 @@
           "overviewRulerColor": "#719FB0",
           "color": "#ffffff",
           "fontWeight": "bold"
-        },
+        }
       ]
-    },
+    }
   },
 
   //  <<< JavaScript, TypeScript >>>
@@ -75,14 +75,14 @@
   // 1.63.0から可能 (参考: https://github.com/microsoft/vscode/issues/51935#issuecomment-981503076)
   "[javascript][javascriptreact][typescript][typescriptreact][html][css][scss][json][graphql]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+    "editor.codeActionsOnSave": ["source.fixAll.eslint"]
   },
   "prettier.printWidth": 120,
 
   // <<< Python >>>
   "[python]": {
     "editor.tabSize": 4,
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": true
   },
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
@@ -110,7 +110,7 @@
     "119",
     "--ignore=E203, W503, W504"
   ],
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1
 
   // --- Linter and Formatter(autopep8) ---
   // "python.linting.flake8Args": [
