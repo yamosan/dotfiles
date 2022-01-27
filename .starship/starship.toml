@@ -7,6 +7,7 @@ truncation_length = 5
 
 [cmd_duration]
 format = " took [$duration]($style)"
+style = "yellow"
 
 [package]
 disabled = true
