@@ -3,6 +3,10 @@ format = "$all"
 
 [directory]
 style = "cyan"
+truncation_length = 5
+
+[cmd_duration]
+format = " took [$duration]($style)"
 
 [package]
 disabled = true
@@ -12,13 +16,20 @@ disabled = true
 style = "blue"
 
 [git_branch]
-symbol = "🌱 "
 style = "green"
+symbol = "🌱 "
 
 [git_status]
 style = "yellow"
 
 [nodejs]
-format = "via[$symbol($version )]($style)"
-symbol = "   "
+style = "bright-green"
+
+[python]
+style = "bright-yellow"
+
+[golang]
+style = "cyan"
+
+[ruby]
 style = "red"
