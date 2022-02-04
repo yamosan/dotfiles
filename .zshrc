@@ -30,7 +30,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
-### fuzzy finder
+### fzf
 zinit ice from"gh-r" as"command"
 zinit light junegunn/fzf
 zinit ice id-as"junegunn/fzf-completions" mv"shell/completion.zsh -> _fzf" src"shell/key-bindings.zsh" pick"/dev/null"
