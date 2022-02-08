@@ -57,7 +57,7 @@ zinit light asdf-vm/asdf
 ### pipenv
 export PIPENV_VENV_IN_PROJECT=true # プロジェクトディレクトリ配下に仮想環境を作成
 
-### キーバインド
+### key bindings
 stty stop undef # C-s での画面停止を無効
 
 ### history
