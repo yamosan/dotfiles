@@ -43,6 +43,14 @@ function select-history() {
 zle -N select-history
 bindkey '^r' select-history
 
+function select-git-checkout() {
+  # https://www.rasukarusan.com/entry/2018/08/14/083000
+  git checkout $(git branch -a | tr -d " " | fzf --select-1 --exit-0 --multi --layout=reverse --info=hidden --height=100% --prompt="CHECKOUT BRANCH > " --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")
+  zle accept-line
+}
+zle -N select-git-checkout
+bindkey "^g" select-git-checkout
+
 ### starship
 export STARSHIP_CONFIG=${HOME}/.starship/starship.toml
 zinit ice as"command" from"gh-r" \
@@ -96,3 +104,4 @@ alias ll="ls -lG"
 alias la="ls -laG"
 alias d='docker'
 alias dc='docker-compose'
+
