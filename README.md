@@ -8,3 +8,7 @@ $ sh install.sh
   - `git branch`, `bat` とかと組み合わせた関数をつくる
   - 見た目調整
 - brew
+  - fira-code
+- mac
+- terminal
+  - iceberg
