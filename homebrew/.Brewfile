@@ -15,3 +15,8 @@ cask "google-japanese-ime"
 cask "raycast"
 cask "visual-studio-code"
 # cask "slack"
+
+# MX ERGO
+cask "hammerspoon"
+# tap "homebrew/cask-drivers"
+# cask "logitech-options"
