@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 DOT_FILES=(.zshrc .starship .gitconfig .gitignore_global .hammerspoon)
 DOT_PATH=$HOME/dotfiles
