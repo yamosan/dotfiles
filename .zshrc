@@ -49,7 +49,8 @@ function select-git-checkout() {
   zle accept-line
 }
 zle -N select-git-checkout
-bindkey "^g" select-git-checkout
+alias gco='select-git-checkout'
+# bindkey "^g" select-git-checkout
 
 ### starship
 export STARSHIP_CONFIG=${HOME}/.starship/starship.toml
