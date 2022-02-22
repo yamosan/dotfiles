@@ -1,5 +1,5 @@
 ```shell
-$ sh install.sh
+$ sh init.sh
 ```
 
 #### TODO
