@@ -1,0 +1,10 @@
+[
+  {
+    "key": "cmd+r cmd+r",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "shift+cmd+r shift+cmd+r",
+    "command": "code-runner.stop"
+  },
+]

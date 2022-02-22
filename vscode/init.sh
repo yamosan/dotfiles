@@ -5,3 +5,4 @@ VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
 
 ln -svf "$SCRIPT_DIR/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
 ln -svf "${SCRIPT_DIR}/snippets" "${VSCODE_SETTING_DIR}/snippets"
+ln -svf "${SCRIPT_DIR}/keybindings.json" "${VSCODE_SETTING_DIR}/keybindings.json"
