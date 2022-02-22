@@ -53,7 +53,7 @@ alias gco='select-git-checkout'
 # bindkey "^g" select-git-checkout
 
 ### starship
-export STARSHIP_CONFIG=${HOME}/.starship/starship.toml
+export STARSHIP_CONFIG=${HOME}/.starship.toml
 zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
