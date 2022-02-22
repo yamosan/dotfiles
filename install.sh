@@ -5,7 +5,6 @@ DOT_FILES=(
   .gitconfig
   .gitignore_global
   .starship.toml
-  .hammerspoon
 )
 DOT_PATH=$HOME/dotfiles
 
