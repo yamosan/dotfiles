@@ -17,6 +17,7 @@
 	lg = log --graph --decorate --abbrev-commit --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)'
 	lga = lg --all
 	lgn = log --graph --decorate --abbrev-commit --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)\n  %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	lgna = lgn --all
 	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ > .gitignore ;}; gi"
 [pull "main"]
 	rebase = true
