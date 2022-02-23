@@ -35,7 +35,7 @@ zinit ice from"gh-r" as"command"
 zinit light junegunn/fzf
 zinit ice id-as"junegunn/fzf-completions" mv"shell/completion.zsh -> _fzf" src"shell/key-bindings.zsh" pick"/dev/null"
 zinit light junegunn/fzf
-export FZF_DEFAULT_OPTS="--select-1 --exit-0 --layout=reverse --info=hidden --no-multi"
+export FZF_DEFAULT_OPTS="--exit-0 --layout=reverse --info=hidden --no-multi"
 function select-history() {
   BUFFER=$(history -n -r 1 | fzf --height=40% --border=rounded --query="$LBUFFER" --prompt="History > ")
   CURSOR=${#BUFFER}
