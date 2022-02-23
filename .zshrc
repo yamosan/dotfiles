@@ -57,9 +57,7 @@ function select-git-switch() {
       fi
     fi
   }
-
-  # TODO: switch でも git co リモート と同じことが出来るか検証
-  target_br=$(git branch -a | \
+  target_br=$(git branch -a | grep -v '^.*->.*$' | \
     search | \
     head -n 1 | \
     perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g" \
