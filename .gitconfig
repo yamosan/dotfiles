@@ -8,6 +8,8 @@
 	br = branch
 	st = status
 	co = checkout
+	sw = switch
+	rs = restore
 	cm = commit -m
 	amend = commit --amend -m
   reamend = commit --amend -C HEAD
