@@ -105,4 +105,3 @@ alias ll="ls -lG"
 alias la="ls -laG"
 alias d='docker'
 alias dc='docker-compose'
-
