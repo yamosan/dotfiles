@@ -35,22 +35,43 @@ zinit ice from"gh-r" as"command"
 zinit light junegunn/fzf
 zinit ice id-as"junegunn/fzf-completions" mv"shell/completion.zsh -> _fzf" src"shell/key-bindings.zsh" pick"/dev/null"
 zinit light junegunn/fzf
+export FZF_DEFAULT_OPTS="--select-1 --exit-0 --layout=reverse --info=hidden --no-multi"
 function select-history() {
-  BUFFER=$(history -n -r 1 | fzf --height=40% --layout=reverse --info=hidden --border=rounded --query="$LBUFFER" --prompt="History > ")
+  BUFFER=$(history -n -r 1 | fzf --height=40% --border=rounded --query="$LBUFFER" --prompt="History > ")
   CURSOR=${#BUFFER}
   zle redisplay
 }
 zle -N select-history
 bindkey '^r' select-history
 
-function select-git-checkout() {
-  # https://www.rasukarusan.com/entry/2018/08/14/083000
-  git checkout $(git branch -a | tr -d " " | fzf --select-1 --exit-0 --multi --layout=reverse --info=hidden --height=100% --prompt="CHECKOUT BRANCH > " --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")
-  zle accept-line
+function select-git-switch() {
+  search() {
+    if [ -p /dev/stdin ]; then
+      arg=$(cat /dev/stdin)
+      if [ $COLUMNS -le 60 ]; then
+        echo $(echo $arg | fzf --prompt="CHECKOUT BRANCH > ")
+      elif [ $COLUMNS -le 80 ]; then
+        echo $(echo $arg | fzf --min-height=10 --preview-window="bottom,90%" --prompt="CHECKOUT BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
+      else
+        echo $(echo $arg | fzf --preview-window="right,70%" --prompt="CHECKOUT BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
+      fi
+    fi
+  }
+
+  # TODO: switch でも git co リモート と同じことが出来るか検証
+  target_br=$(git branch -a | \
+    search | \
+    head -n 1 | \
+    perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g" \
+  )
+  if [ -n "$target_br" ]; then
+    echo "git switch $target_br"
+    git switch $target_br
+    zle accept-line
+  fi
 }
-zle -N select-git-checkout
-alias gco='select-git-checkout'
-# bindkey "^g" select-git-checkout
+zle -N select-git-switch
+bindkey "^g" select-git-switch
 
 ### starship
 export STARSHIP_CONFIG=${HOME}/.starship.toml
