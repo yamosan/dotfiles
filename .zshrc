@@ -35,7 +35,7 @@ zinit ice from"gh-r" as"command"
 zinit light junegunn/fzf
 zinit ice id-as"junegunn/fzf-completions" mv"shell/completion.zsh -> _fzf" src"shell/key-bindings.zsh" pick"/dev/null"
 zinit light junegunn/fzf
-export FZF_DEFAULT_OPTS="--exit-0 --layout=reverse --info=hidden --no-multi"
+export FZF_DEFAULT_OPTS="--exit-0 --layout=reverse --info=hidden --no-multi --bind='ctrl-a:first' --bind='ctrl-e:last'"
 function select-history() {
   BUFFER=$(history -n -r 1 | fzf --height=40% --border=rounded --query="$LBUFFER" --prompt="History > ")
   CURSOR=${#BUFFER}
@@ -118,7 +118,7 @@ setopt pushd_ignore_dups   # 同じディレクトリはスタックしない
 function chpwd() { ls -G } # 作業ディレクトリが変わるたびにlsを実行
 
 ### aliases
-alias c='clear'
+alias c='clear' # ^L
 alias cdd='cd ~/Desktop'
 alias relogin='exec $SHELL -l'
 alias ls="ls -1G"
