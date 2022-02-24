@@ -1,3 +1,4 @@
+-- https://github.com/tekezo/Karabiner/issues/814#issuecomment-337643019
 -- HANDLE SCROLLING
 local deferred = false
 
