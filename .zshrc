@@ -49,11 +49,11 @@ function select-git-switch() {
     if [ -p /dev/stdin ]; then
       arg=$(cat /dev/stdin)
       if [ $COLUMNS -le 60 ]; then
-        echo $(echo $arg | fzf --prompt="CHECKOUT BRANCH > ")
+        echo $(echo $arg | fzf --prompt="SWITCH BRANCH > ")
       elif [ $COLUMNS -le 80 ]; then
-        echo $(echo $arg | fzf --min-height=10 --preview-window="bottom,90%" --prompt="CHECKOUT BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
+        echo $(echo $arg | fzf --min-height=10 --preview-window="bottom,90%" --prompt="SWITCH BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
       else
-        echo $(echo $arg | fzf --preview-window="right,70%" --prompt="CHECKOUT BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
+        echo $(echo $arg | fzf --preview-window="right,65%" --prompt="SWITCH BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
       fi
     fi
   }
@@ -63,6 +63,7 @@ function select-git-switch() {
     perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g" \
   )
   if [ -n "$target_br" ]; then
+    zle kill-buffer
     echo "git switch $target_br"
     git switch $target_br
     zle accept-line
