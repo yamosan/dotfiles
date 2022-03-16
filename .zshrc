@@ -123,5 +123,6 @@ alias relogin='exec $SHELL -l'
 alias ls="ls -1G"
 alias ll="ls -lG"
 alias la="ls -laG"
+alias cat="bat --plain"
 alias d='docker'
 alias dc='docker-compose'
