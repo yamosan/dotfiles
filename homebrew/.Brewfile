@@ -17,6 +17,6 @@ cask "visual-studio-code"
 # cask "slack"
 
 # MX ERGO
-cask "hammerspoon"
+# cask "hammerspoon"
 # tap "homebrew/cask-drivers"
 # cask "logitech-options"
