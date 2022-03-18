@@ -106,8 +106,7 @@
     "--max-line-length",
     "119",
     "--ignore=E203, W503, W504"
-  ],
-  "window.zoomLevel": 1
+  ]
 
   // --- Linter and Formatter(autopep8) ---
   // "python.linting.flake8Args": [
