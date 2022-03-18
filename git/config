@@ -1,8 +1,7 @@
-[user]
-	name = yamosan
-	email = yamorimasato@gmail.com
-[core]
-	excludesfile = ~/.gitignore_global
+[include]
+  path = ~/.config/git/config.local
+[ghq]
+  root = ~/.ghq
 [alias]
 	aliases = config --get-regexp ^alias\\.
 	br = branch
@@ -18,6 +17,7 @@
 	lga = lg --all
 	lgn = log --graph --decorate --abbrev-commit --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)\n  %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 	lgna = lgn --all
+	get = "!ghq get"
 	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ > .gitignore ;}; gi"
 [pull "main"]
 	rebase = true
