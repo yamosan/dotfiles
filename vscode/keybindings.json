@@ -6,5 +6,5 @@
   {
     "key": "shift+cmd+r shift+cmd+r",
     "command": "code-runner.stop"
-  },
+  }
 ]
