@@ -33,4 +33,17 @@ function _fzf_select_git_switch() {
   fi
 }
 zle -N _fzf_select_git_switch
-bindkey "^g" _fzf_select_git_switch
+bindkey "^s" _fzf_select_git_switch
+
+function _fzf_select_ghq_cd() {
+  local dest
+  dest="$(ghq list | fzf)"
+
+  if [ -n "$dest" ]; then
+    BUFFER="cd $(ghq root)/$dest"
+    zle accept-line
+  fi
+  zle redisplay
+}
+zle -N _fzf_select_ghq_cd
+bindkey "^g" _fzf_select_ghq_cd

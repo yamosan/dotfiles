@@ -43,3 +43,7 @@ zinit light starship/starship
 
 # asdf
 zinit light asdf-vm/asdf
+
+# ghq
+zinit ice from"gh-r" as"program" pick"*/ghq"
+zinit light "x-motemen/ghq"
