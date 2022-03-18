@@ -1,5 +1,6 @@
 alias c='clear' # ^L
 alias cdd='cd ~/Desktop'
+alias dot='cd ~/dotfiles'
 alias relogin='exec $SHELL -l'
 alias ls="ls -1G"
 alias ll="ls -lG"
