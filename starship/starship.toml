@@ -1,5 +1,5 @@
 add_newline = true
-format = "$all"
+command_timeout = 1000
 
 [directory]
 style = "cyan"
@@ -14,23 +14,31 @@ disabled = true
 
 [aws]
 disabled = true
-style = "blue"
 
 [git_branch]
 style = "green"
-symbol = "🌱 "
+symbol = " "
 
 [git_status]
+format = '([\[$all_status$ahead_behind\]]($style)[ - ](white))'
 style = "yellow"
 
 [nodejs]
-style = "bright-green"
+format = "[$symbol ($version )](fg:green)"
+symbol = ""
 
 [python]
-style = "bright-yellow"
+format = "[$symbol ($version )](fg:yellow)"
+symbol = ""
 
 [golang]
-style = "cyan"
+format = "[$symbol ($version )](fg:cyan)"
+symbol = "ﳑ"
 
 [ruby]
-style = "red"
+format = "[$symbol ($version )](fg:red)"
+symbol = ""
+
+[rust]
+format = "[$symbol ($version )](fg:white)"
+symbol = ""
