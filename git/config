@@ -1,7 +1,7 @@
 [include]
   path = ~/.config/git/config.local
 [ghq]
-  root = ~/.ghq
+  root = ~/ghq
 [alias]
 	aliases = config --get-regexp ^alias\\.
 	br = branch
