@@ -26,9 +26,7 @@ function _fzf_select_git_switch() {
       perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g"
   )
   if [ -n "$target_br" ]; then
-    zle kill-buffer
-    echo "git switch $target_br"
-    git switch $target_br
+    BUFFER="git switch $target_br"
     zle accept-line
   fi
 }
