@@ -1,0 +1,31 @@
+{
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "FiraCodeNerdFontComplete-Retina",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Cobalt Next",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  // ------------------ extensions ------------------
+  "git.autofetch": true,
+  "cSpell.userWords": [
+    "fuga",
+    "hoge",
+    "piyo",
+    "signin",
+    "signup"
+  ]
+}

@@ -1,0 +1,18 @@
+export DOTFILES="${HOME}/dotfiles"
+
+# XDG
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_DATA_HOME="${XDG_CONFIG_HOME}/local/share"
+export XDG_CACHE_HOME="${XDG_CONFIG_HOME}/cache"
+
+# zsh
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+
+# starship
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
+
+# fzf
+export FZF_DEFAULT_OPTS="--exit-0 --layout=reverse --info=hidden --no-multi --bind='ctrl-a:first' --bind='ctrl-e:last'"
+
+# pipenv
+export PIPENV_VENV_IN_PROJECT=true # プロジェクトディレクトリ配下に仮想環境を作成

@@ -1,0 +1,44 @@
+add_newline = true
+command_timeout = 1000
+
+[directory]
+style = "cyan"
+truncation_length = 5
+
+[cmd_duration]
+format = " took [$duration]($style)"
+style = "yellow"
+
+[package]
+disabled = true
+
+[aws]
+disabled = true
+
+[git_branch]
+style = "green"
+symbol = " "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style)[ - ](white))'
+style = "yellow"
+
+[nodejs]
+format = "[$symbol ($version )](fg:green)"
+symbol = ""
+
+[python]
+format = "[$symbol ($version )](fg:yellow)"
+symbol = ""
+
+[golang]
+format = "[$symbol ($version )](fg:cyan)"
+symbol = "ﳑ"
+
+[ruby]
+format = "[$symbol ($version )](fg:red)"
+symbol = ""
+
+[rust]
+format = "[$symbol ($version )](fg:white)"
+symbol = ""

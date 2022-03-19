@@ -1,0 +1,12 @@
+{
+  "hook": {
+    "prefix": "hook",
+    "body": [
+      "import { $1 } from \"react\";",
+      "",
+      "export const $TM_FILENAME_BASE = () => {",
+      "",
+      "}"
+    ]
+  }
+}
