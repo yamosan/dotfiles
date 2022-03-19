@@ -7,7 +7,6 @@ brew "git"
 brew "curl"
 brew "tree"
 brew "vim"
-brew "ghq"
 
 cask "font-fira-code-nerd-font"
 cask "docker"
