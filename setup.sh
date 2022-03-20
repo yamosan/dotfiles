@@ -27,6 +27,14 @@ mkdir -p "$XDG_CONFIG_HOME/git"
 symlink "$DOTFILES/git/config" "$XDG_CONFIG_HOME/git/config"
 symlink "$DOTFILES/git/ignore" "$XDG_CONFIG_HOME/git/ignore"
 
+# tmux
+mkdir -p "$XDG_CONFIG_HOME/tmux"
+symlink "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
+
+# talacritty
+mkdir -p "$XDG_CONFIG_HOME/alacritty"
+symlink "$DOTFILES/alacritty/alacritty.yml" "$XDG_CONFIG_HOME/alacritty/alacritty.yml"
+
 # Starship
 mkdir -p "$XDG_CONFIG_HOME/starship"
 symlink "$DOTFILES/starship/starship.toml" "$XDG_CONFIG_HOME/starship/starship.toml"
