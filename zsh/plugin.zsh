@@ -26,19 +26,17 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 
 # bat
-zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
+zinit ice from"gh-r" as"command" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
 # fzf
 zinit ice from"gh-r" as"command"
 zinit light junegunn/fzf
-zinit ice id-as"junegunn/fzf-completions" mv"shell/completion.zsh -> _fzf" src"shell/key-bindings.zsh" pick"/dev/null"
-zinit light junegunn/fzf
 
 # starship
 zinit ice from"gh-r" as"command" bpick'*tar.gz'\
-          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-          atpull"%atclone" src"init.zsh"
+    atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+    atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
 # asdf
