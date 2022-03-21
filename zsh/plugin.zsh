@@ -29,6 +29,10 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit ice from"gh-r" as"command" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
+# exa
+zinit ice from"gh-r" as"command" mv"exa* -> exa" pick"bin/exa"
+zinit light ogham/exa
+
 # fzf
 zinit ice from"gh-r" as"command"
 zinit light junegunn/fzf
