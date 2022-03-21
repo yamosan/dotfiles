@@ -7,6 +7,11 @@ export XDG_CACHE_HOME="${XDG_CONFIG_HOME}/cache"
 
 # zsh
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export LS_COLORS='di=34:bd=33:cd=33:so=31:ex=32:ln=35'
+export EXA_CLORS='di=34:bd=33:cd=33:so=31:ex=32:ur=33:uw=31:ux=32:ue=32:uu=33:gu=33:lc=31:df=32:sn=32:nb=32:nk=32:nm=32:ng=32:nt=32'
+export HISTSIZE=100000                         # ヒストリに保存するコマンド
+export SAVEHIST=100000                         # 履歴ファイルに保存される履歴の件数
+export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit)" # 以下のコマンドは記録しない(?や* も使える)
 
 # starship
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
