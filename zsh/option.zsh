@@ -21,8 +21,8 @@ setopt share_history                    # シェルのプロセスごとに履�
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'       # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*:default' menu select=2              # 補完侯補をメニューから選択する。select=2: 補完候補を一覧から選択する。補完候補が2つ以上なければすぐに補完する。
 zstyle ':completion:*:commands' rehash 1                  # 新しくインストールされたコマンドを即時認識
-if [ -n "$LS_COLORS" ]; then
-    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} 
+if [ -n "$LS_COLORS" ]; then                              # ファイル補完候補ハイライト
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 fi
 
 # directory
