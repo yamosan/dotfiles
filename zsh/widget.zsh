@@ -13,9 +13,9 @@ function _fzf_select_git_switch() {
       if [ $COLUMNS -le 60 ]; then
         echo $(echo $arg | fzf --prompt="SWITCH BRANCH > ")
       elif [ $COLUMNS -le 80 ]; then
-        echo $(echo $arg | fzf --min-height=10 --preview-window="bottom,90%" --prompt="SWITCH BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
+        echo $(echo $arg | fzf --min-height=10 --preview-window="bottom,90%" --prompt="SWITCH BRANCH > " --preview="echo {} | tr -d ' *' | xargs git lgn --color=always")
       else
-        echo $(echo $arg | fzf --preview-window="right,65%" --prompt="SWITCH BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lgn --color=always }; f {}')
+        echo $(echo $arg | fzf --preview-window="right,65%" --prompt="SWITCH BRANCH > " --preview="echo {} | tr -d ' *' | xargs git lgn --color=always")
       fi
     fi
   }
