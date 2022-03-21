@@ -4,10 +4,6 @@ autoload -Uz compinit && compinit
 stty stop undef # C-s での画面停止を無効
 
 # history
-export HISTFILE=${HOME}/.zsh_history    # ファイル名
-export HISTSIZE=100000                  # ヒストリに保存するコマンド
-export SAVEHIST=100000                  # 履歴ファイルに保存される履歴の件数
-export HISTIGNORE=pwd:ls:la:ll:lla:exit # 以下のコマンドは記録しない(?や* も使える)
 setopt append_history                   # HISTFILEを置き換えずに上書き
 setopt hist_expire_dups_first           # 同じコマンドを履歴に追加したとき、最初に追加されたものを履歴から削除
 setopt hist_ignore_all_dups             # 重複するコマンド行は古い方を削除
