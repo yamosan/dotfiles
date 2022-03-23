@@ -21,21 +21,12 @@ zinit light-mode for \
 
 
 # plugins
+zinit ice wait'0' lucid
 zinit light zsh-users/zsh-completions
+zinit ice wait'0' lucid
 zinit light zsh-users/zsh-autosuggestions
+zinit ice wait'0' lucid
 zinit light zsh-users/zsh-syntax-highlighting
-
-# bat
-zinit ice from"gh-r" as"command" mv"bat* -> bat" pick"bat/bat"
-zinit light sharkdp/bat
-
-# exa
-zinit ice from"gh-r" as"command" mv"exa* -> exa" pick"bin/exa"
-zinit light ogham/exa
-
-# fzf
-zinit ice from"gh-r" as"command"
-zinit light junegunn/fzf
 
 # starship
 zinit ice from"gh-r" as"command" bpick'*tar.gz'\
@@ -43,9 +34,22 @@ zinit ice from"gh-r" as"command" bpick'*tar.gz'\
     atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
+# bat
+zinit ice wait'0' lucid as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
+zinit light sharkdp/bat
+
+# exa
+zinit ice wait'0' lucid as"command" from"gh-r" mv"completions/exa.zsh -> _exa" pick"bin/exa"
+zinit light ogham/exa
+
+# fzf
+zinit ice wait'0' lucid from"gh-r" as"command"
+zinit light junegunn/fzf
+
 # asdf
+zinit ice wait'0' lucid
 zinit light asdf-vm/asdf
 
 # ghq
-zinit ice from"gh-r" as"program" pick"*/ghq"
+zinit ice wait'0' lucid from"gh-r" as"command" mv"ghq* -> ghq" pick"ghq/ghq"
 zinit light "x-motemen/ghq"
