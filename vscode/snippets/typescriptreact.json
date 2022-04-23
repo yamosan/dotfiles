@@ -7,11 +7,11 @@
   "basic functional component (named export)": {
     "prefix": "rafc",
     "body": [
-      "import type { VFC } from \"react\";",
+      "import type { FC } from \"react\";",
       "",
       "type Props = {}",
       "",
-      "export const $TM_FILENAME_BASE: VFC<Props> = (props) => {",
+      "export const $TM_FILENAME_BASE: FC<Props> = (props) => {",
       "  return (",
       "    <div>",
       "      $1",
@@ -24,11 +24,11 @@
   "basic functional component (default export)": {
     "prefix": "rafce",
     "body": [
-      "import type { VFC } from \"react\";",
+      "import type { FC } from \"react\";",
       "",
       "type Props = {}",
       "",
-      "const $TM_FILENAME_BASE: VFC<Props> = (props) => {",
+      "const $TM_FILENAME_BASE: FC<Props> = (props) => {",
       "  return (",
       "    <div>",
       "      $1",
