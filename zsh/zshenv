@@ -8,7 +8,7 @@ export XDG_CACHE_HOME="${XDG_CONFIG_HOME}/cache"
 # zsh
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export LS_COLORS='di=34:bd=33:cd=33:so=31:ex=32:ln=35'
-export EXA_COLORS='ur=33:uw=33:ux=33:ue=33:gr=33:gw=33:gx=33:tr=33:tw=33:tx=33:su=33:sf=33:xa=33:sn=32:sb=32:df=32:ds=32:uu=33:un=33:gu=33:gn=33:da=36'
+export EXA_COLORS='ur=33:uw=33:ux=33:ue=33:gr=33:gw=33:gx=33:tr=33:tw=33:tx=33:su=33:sf=33:xa=33:sn=32:sb=32:df=32:ds=32:uu=37:un=37:gu=37:gn=37:da=36'
 export HISTSIZE=100000                         # ヒストリに保存するコマンド
 export SAVEHIST=100000                         # 履歴ファイルに保存される履歴の件数
 export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit)" # 以下のコマンドは記録しない(?や* も使える)
