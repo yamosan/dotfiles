@@ -42,3 +42,7 @@ symbol = ""
 [rust]
 format = "[$symbol ($version )](fg:white)"
 symbol = ""
+
+[docker]
+# format = "[$symbol ($version )](fg:white)"
+symbol = ""
