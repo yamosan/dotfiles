@@ -30,7 +30,41 @@ config.colors = {
     },
     scrollbar_thumb = '#7c7c7c',
     split = '#555555',
+
+    tab_bar = {
+        active_tab = {
+            bg_color = '#142930',
+            fg_color = '#d1d3e0',
+            intensity = 'Normal',
+            underline = 'None',
+        },
+        inactive_tab = {
+            bg_color = '#1f1f1f',
+            fg_color = '#8b929c',
+            intensity = 'Normal',
+            underline = 'None',
+        },
+        inactive_tab_hover = {
+            bg_color = '#142930',
+            fg_color = '#d1d3e0',
+            intensity = 'Normal',
+            underline = 'None',
+        },
+        new_tab  = {
+            bg_color = '#1f1f1f',
+            fg_color = '#d1d3e0',
+            intensity = 'Normal',
+            underline = 'None',
+        }
+    },
 }
+config.use_fancy_tab_bar = true
+config.window_frame = {
+  font_size = 13.0,
+  active_titlebar_bg = '#1f1f1f',
+  inactive_titlebar_bg = '#1f1f1f',
+}
+
 
 config.enable_scroll_bar = true
 config.min_scroll_bar_height = "0.5cell"
