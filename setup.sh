@@ -42,4 +42,12 @@ symlink "$DOTFILES/vscode/snippets" "$VSCODE_SETTING_DIR/snippets"
 symlink "$DOTFILES/vscode/settings.json" "$VSCODE_SETTING_DIR/settings.json"
 symlink "$DOTFILES/vscode/keybindings.json" "$VSCODE_SETTING_DIR/keybindings.json"
 
+# WezTerm
+mkdir -p "$XDG_CONFIG_HOME/sheldon"
+symlink "$DOTFILES/sheldon" "$XDG_CONFIG_HOME/sheldon"
+
+# WezTerm
+mkdir -p "$XDG_CONFIG_HOME/wezterm"
+symlink "$DOTFILES/wezterm" "$XDG_CONFIG_HOME/wezterm"
+
 exec $SHELL -l
