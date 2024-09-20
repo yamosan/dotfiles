@@ -1,5 +1,3 @@
-[include]
-  path = ~/.config/git/config.local
 [ghq]
   root = ~/ghq
 [alias]
