@@ -25,4 +25,4 @@ fi
 setopt auto_cd             # ディレクトリ名のみで移動できる
 setopt auto_pushd          # cd -[tab] で履歴
 setopt pushd_ignore_dups   # 同じディレクトリはスタックしない
-function chpwd() { exa --icons --group-directories-first } # 作業ディレクトリが変わるたびにlsを実行
+function chpwd() { eza --icons --group-directories-first } # 作業ディレクトリが変わるたびにlsを実行
