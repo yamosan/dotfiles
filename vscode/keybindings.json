@@ -1,0 +1,6 @@
+[
+  {
+    "key": "cmd+k cmd+g",
+    "command": "gitlens.copyRemoteFileUrlToClipboard"
+  }
+]
