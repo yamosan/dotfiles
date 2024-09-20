@@ -19,8 +19,25 @@ function _fzf_select_git_switch() {
       fi
     fi
   }
+
+  print_recently_checked_out_branches() {
+    git --no-pager reflog | awk '$3 == "checkout:" && /moving from/ {print $8}' | awk '!a[$0]++{print}' | head
+  }
+
+  print_all_branches() {
+    git branch -a | grep -v '^.*->.*$' | sed 's/^..//'
+  }
+
+  print_search_args() {
+    (
+      print_recently_checked_out_branches &&
+      echo &&
+      print_all_branches
+    ) | awk '!a[$0]++{if(NR==1) print "* " $0; else print "  " $0}'
+  }
+
   target_br=$(
-    git branch -a | grep -v '^.*->.*$' |
+    print_search_args |
       search |
       head -n 1 |
       perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g"
