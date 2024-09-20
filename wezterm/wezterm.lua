@@ -206,6 +206,13 @@ config.keys = {
         mods = 'SUPER',
         action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection',
     },
+    -- ペースト
+    {
+        key = 'v',
+        mods = 'SUPER',
+        action = wezterm.action.PasteFrom 'Clipboard',
+    },
 }
+
 
 return config
