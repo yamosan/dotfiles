@@ -12,12 +12,3 @@ export EXA_COLORS='ur=33:uw=33:ux=33:ue=33:gr=33:gw=33:gx=33:tr=33:tw=33:tx=33:s
 export HISTSIZE=100000                         # ヒストリに保存するコマンド
 export SAVEHIST=100000                         # 履歴ファイルに保存される履歴の件数
 export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit)" # 以下のコマンドは記録しない(?や* も使える)
-
-# starship
-export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
-
-# fzf
-export FZF_DEFAULT_OPTS="--exit-0 --layout=reverse --info=hidden --no-multi --bind='ctrl-a:first' --bind='ctrl-e:last'"
-
-# pipenv
-export PIPENV_VENV_IN_PROJECT=true # プロジェクトディレクトリ配下に仮想環境を作成
