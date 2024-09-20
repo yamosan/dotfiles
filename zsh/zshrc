@@ -2,3 +2,23 @@ source $DOTFILES/zsh/option.zsh
 source $DOTFILES/zsh/plugin.zsh
 source $DOTFILES/zsh/alias.zsh
 source $DOTFILES/zsh/widget.zsh
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# starship
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
+
+# fzf
+export FZF_DEFAULT_OPTS="--exit-0 --layout=reverse --info=hidden --no-multi --bind='ctrl-a:first' --bind='ctrl-e:last'"
+
+# pipenv
+export PIPENV_VENV_IN_PROJECT=true # プロジェクトディレクトリ配下に仮想環境を作成
+
+# asdf-flutter
+export FLUTTER_ROOT="$(asdf where flutter)"
+
+# asdf-golang
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+
+typeset -gA ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
