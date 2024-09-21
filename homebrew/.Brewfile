@@ -11,7 +11,7 @@ brew "fzf"
 brew "asdf"
 brew "ghq"
 brew "bat"
-brew "exa"
+brew "eza"
 
 cask "font-fira-code-nerd-font"
 cask "docker"
