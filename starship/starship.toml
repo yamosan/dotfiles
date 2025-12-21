@@ -43,6 +43,6 @@ symbol = ""
 format = "[$symbol ($version )](fg:white)"
 symbol = ""
 
-[docker]
+[docker_context]
 # format = "[$symbol ($version )](fg:white)"
 symbol = ""
