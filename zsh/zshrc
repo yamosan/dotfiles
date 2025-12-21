@@ -5,6 +5,7 @@ source $DOTFILES/zsh/widget.zsh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(sheldon source)"
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
 
 # starship
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
