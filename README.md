@@ -1,3 +1,8 @@
 ```shell
-$ sh setup.sh
+$ cd homebrew
+$ ./install.sh
+```
+
+```shell
+$ ./setup.sh
 ```
